@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    tools:context=".Fragment_item"
+    android:background="@color/darker_gray">
+
+    <!-- TODO: check whats different between wrap_content and match_parent -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/darker_gray">
+
+        <ImageView
+            android:id="@+id/tinyImage01"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage01"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage02"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage03"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage04"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage05"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/tinyImage06"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/swan"
+            android:src="@drawable/swan"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

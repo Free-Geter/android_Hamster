@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_show"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/show_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:contentDescription="@string/swan"
+        android:src="@drawable/swan"
+        />
+
+
+    <TextView
+        android:id="@+id/showImage_text"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:text="This is fragment1"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/holo_green_light"/>
+
+</LinearLayout>
