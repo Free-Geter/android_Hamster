@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +20,10 @@ import android.widget.ImageView;
  */
 public class Fragment_item extends Fragment {
 
+    private static final String TAG = "Fragment_Test";
     ImageClickedListener mCallback;
     ImageView tinyImage;
-    int imgId[] = {R.id.tinyImage01,R.id.tinyImage02,R.id.tinyImage03,R.id.tinyImage04,R.id.tinyImage05,R.id.tinyImage06};
-    int itemSize = imgId.length;
+    int imgId[] = {R.id.tinyImage01,R.id.tinyImage02,R.id.tinyImage03,R.id.tinyImage04,R.id.tinyImage05,R.id.tinyImage06,R.id.tinyImage07};
 
     public interface ImageClickedListener{
         public void updateImage(ImageView img);
@@ -86,7 +87,9 @@ public class Fragment_item extends Fragment {
             throw  new ClassCastException(getActivity().toString() + "must implement ImageClickedListener");
         }
 
-        for (int i = 0; i < itemSize; i++) {
+        for (int i = 0; i < imgId.length; i++) {
+            Log.d(TAG, "onAttach: " + imgId[i]);
+            Log.d(TAG, "onAttach: " + getView());
             tinyImage = (ImageView)getView().findViewById(imgId[i]);
             if (tinyImage != null)
                 tinyImage.setOnClickListener(new View.OnClickListener() {
