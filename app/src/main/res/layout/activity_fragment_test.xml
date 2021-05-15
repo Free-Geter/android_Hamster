@@ -15,12 +15,17 @@
         android:layout_weight="6"
         tools:layout="@layout/fragment_show"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"/>
+
     <fragment
         android:id="@+id/fragment02"
-        android:name="com.example.lesson2.Fragment_item"
+        android:name="com.example.lesson2.Fragment_static"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_item"/>
+        tools:layout="@layout/fragment_static"/>
 
 </LinearLayout>

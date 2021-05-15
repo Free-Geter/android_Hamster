@@ -3,16 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     android:id="@+id/scrollView"
-    tools:context=".Fragment_item"
-    android:background="@color/darker_gray">
+    tools:context=".Fragment_static">
 
-    <!-- TODO: check whats different between wrap_content and match_parent -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/darker_gray">
+        android:background="@android:color/darker_gray">
 
         <ImageView
             android:id="@+id/tinyImage01"

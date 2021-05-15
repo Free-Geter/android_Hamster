@@ -8,15 +8,15 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 public class Fragment_dynamic extends FragmentActivity implements Fragment_item.ImageClickedListener{
-    private ImageView showImg,itemImg;
+    private ImageView showImg;
     private TextView txt;
-    private Fragment tiny;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +24,16 @@ public class Fragment_dynamic extends FragmentActivity implements Fragment_item.
         setContentView(R.layout.activity_fragment_dynamic);
 
         showImg = findViewById(R.id.show_imageView);
-        txt = findViewById(R.id.showImage_text);
+        txt = findViewById(R.id.showImage_text_dynamic);
 
+        Fragment tiny;
         if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             tiny = new Fragment_item();
             tiny.setArguments(getIntent().getExtras());
 
             FragmentManager manager = getSupportFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
-            transaction.add(R.id.content_item,tiny,"itemFragment");
+            transaction.add(R.id.content_item, tiny,"itemFragment");
 
             transaction.commit();
         } else {
@@ -40,7 +41,7 @@ public class Fragment_dynamic extends FragmentActivity implements Fragment_item.
             FragmentTransaction transaction = manager.beginTransaction();
 
             tiny = manager.findFragmentByTag("itemFragment");
-            if (tiny!=null)
+            if (tiny !=null)
                 transaction.remove(tiny);
             transaction.commit();
         }
@@ -49,6 +50,6 @@ public class Fragment_dynamic extends FragmentActivity implements Fragment_item.
     @Override
     public void updateImage(ImageView img) {
         showImg.setImageDrawable(img.getDrawable());
-        txt.setText(showImg.getContentDescription());
+        txt.setText(img.getContentDescription());
     }
 }
